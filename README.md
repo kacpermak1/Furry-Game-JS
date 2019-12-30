@@ -1,5 +1,7 @@
 # Furry Game in JavaScript
-Try to collect as many coins as possible without hitting the wall! ;)
+Collect as many coins as possible without hitting the wall!
+Furry is moving faster and faster!
+Try to reach level 6 ;)
 
 ## Used: 
 - HTML

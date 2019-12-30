@@ -52,6 +52,19 @@ section#score div {
   margin: 1em auto;
 }
 
+#score h2:first-of-type{
+  font-size:20px;
+  margin:10px 0 0 0;
+}
+
+#score h2{
+  font-size:16px;
+}
+
+#score strong{
+  margin:0;
+}
+
 section#score div strong{
   font-size:30px;
 }
