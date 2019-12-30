@@ -84,7 +84,6 @@ function Game() {
         const levelNumber = document.querySelector("#level");
         const board = document.querySelector("#board");
         const eachSquare = board.querySelectorAll("div");
-        const body = document.querySelector("body");
 
         if (this.score >= 10 && this.score <20) {
             clearInterval(this.idSetInterval);
@@ -92,9 +91,10 @@ function Game() {
             levelNumber.innerText = this.level;
             this.idSetInterval = setInterval(() => {
                 this.moveFurry();
-            }, 170);
-            board.style.backgroundColor = "black";
-            body.style.backgroundColor = "black";
+            }, 180);
+            for (let i = 0; i < eachSquare.length; i++) {
+                eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(0, 4, 250)"
+            }
         }
 
         if (this.score >= 20 && this.score <30 ) {
@@ -104,8 +104,6 @@ function Game() {
             this.idSetInterval = setInterval(() => {
                 this.moveFurry();
             }, 130);
-            board.style.backgroundColor = "black";
-            body.style.backgroundColor = "black";
             for (let i = 0; i < eachSquare.length; i++) {
                 eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(0, 204, 255)"
             }
@@ -118,8 +116,6 @@ function Game() {
             this.idSetInterval = setInterval(() => {
                 this.moveFurry();
             }, 110);
-            board.style.backgroundColor = "black";
-            body.style.backgroundColor = "black";
             for (let i = 0; i < eachSquare.length; i++) {
                 eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(255, 5, 5)"
             }
@@ -132,24 +128,33 @@ function Game() {
             this.idSetInterval = setInterval(() => {
                 this.moveFurry();
             }, 100);
-            board.style.backgroundColor = "black";
-            body.style.backgroundColor = "black";
             for (let i = 0; i < eachSquare.length; i++) {
                 eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(13, 255, 5)"
             }
         }
 
-        if (this.score >= 50) {
+        if (this.score >= 50 && this.score < 60) {
             clearInterval(this.idSetInterval);
             this.level = "6";
             levelNumber.innerText = this.level;
             this.idSetInterval = setInterval(() => {
                 this.moveFurry();
             }, 80);
-            board.style.backgroundColor = "black";
-            body.style.backgroundColor = "black";
             for (let i = 0; i < eachSquare.length; i++) {
                 eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(247, 5, 255)"
+            }
+        }
+
+        if (this.score >= 60) {
+            clearInterval(this.idSetInterval);
+            this.level = "7";
+            levelNumber.innerText = this.level;
+            this.idSetInterval = setInterval(() => {
+                this.moveFurry();
+            }, 68);
+            for (let i = 0; i < eachSquare.length; i++) {
+                eachSquare[i].style.boxShadow = "1px 1px 5px 1px rgb(255, 0, 0)"
+                eachSquare[i].style.border= "2px solid red"
             }
         }
     }
@@ -170,7 +175,7 @@ function Game() {
     this.startGame = function () {
         this.idSetInterval = setInterval(() => {
             this.moveFurry();
-        }, 220);
+        }, 240);
 
         document.addEventListener('keydown', (event) => {
             this.turnFurry(event.which);
