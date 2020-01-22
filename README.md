@@ -9,5 +9,9 @@ Try to reach level 7 ;)
 - JavaScript
 - Webpack
 
+## Desktop demo
+
+![Furry JS Game Demo](demo/furryjs-demo.gif)
+
 ## Preview:
 Check the preview of the game here: *https://kacpermak1.github.io/Furry-Game-JS/*
