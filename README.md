@@ -9,7 +9,7 @@ Try to reach level 7 ;)
 - JavaScript
 - Webpack
 
-## Desktop demo
+## Demo
 
 ![Furry JS Game Demo](demo/furryjs-demo.gif)
 
